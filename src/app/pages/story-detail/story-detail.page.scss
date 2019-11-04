@@ -1,0 +1,18 @@
+.series {
+    -webkit-box-flex: 30%;
+    flex: 30%;
+    /* max-width: 50%; */
+    padding: 30px 16px;
+    height: 85%;
+    background-color: #040e84;
+    color: #9bc2e4;
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 30px;
+    font-size: 110px;
+}

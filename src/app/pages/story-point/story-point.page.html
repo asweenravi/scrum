@@ -16,12 +16,11 @@
       <p>Kindly Choose the story point</p>
     </ion-card-content>
   </ion-card>
-  <div class="search-results">
-    <div class="result-section">
-      <div class="series" *ngFor="let item of dataArr; let i = index">
-        <a [routerLink]="['/story-detail', i]">
+    <div class="search-results">
+      <div class="result-section">
+        <div *ngFor="let item of dataArr; let i = index" class="series" (click)="goToStoryDetailPage(item)">
           {{item}}
-        </a>
+        </div>
       </div>
     </div>
   </div>
