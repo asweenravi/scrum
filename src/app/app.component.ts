@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Parse } from 'parse';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -22,6 +22,8 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      Parse.initialize("YOUR-APP-ID", "YOUR-JS-KEY");
+      Parse.serverURL = 'https://parseapi.back4app.com/';
     });
   }
 }
