@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Story Point</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Welcome to Nextgen Scrum</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Kindly Choose the story point</p>
+    </ion-card-content>
+  </ion-card>
+    <div class="search-results">
+      <div class="result-section">
+          <div class="series" *ngFor="let item of dataArr; let i = index">
+              <a [routerLink]="['/story-detail', i]">
+                {{item}}
+              </a>
+          </div>
+      </div>
+  </div>
+</ion-content>
+
+
