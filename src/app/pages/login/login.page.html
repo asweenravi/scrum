@@ -4,9 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="login-section">
-      <ion-item>
+<ion-content has-header="true" padding="true">
+  <div class="row row-center login-section">
+      <div class="col col-center">
+        <ion-item>
           <ion-label position="floating">Username</ion-label>
           <ion-input></ion-input>
         </ion-item>
@@ -15,6 +16,7 @@
             <ion-input pattern="Password"></ion-input>
           </ion-item>
   
-  <ion-button expand="block" (click)="goToHome()">Login</ion-button>
+        <ion-button expand="block" (click)="goToHome()">Login</ion-button>
+      </div>
   </div>
 </ion-content>
