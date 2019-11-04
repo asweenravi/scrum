@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import * as _ from 'lodash';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-story-point',
@@ -8,12 +10,13 @@ import * as _ from 'lodash';
 })
 export class StoryPointPage implements OnInit {
   dataArr:any;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     let data = this.getFibonacciSeries(10);
     this.dataArr = _.uniq(data);
   }
+
   getFibonacciSeries (n) {
     if (n===1) {
       return [0, 1];
@@ -23,5 +26,8 @@ export class StoryPointPage implements OnInit {
       return s;
     }
   };
+  goToStoryDetailPage(i) {
+    this.router.navigate(['story-detail', i]);
+  }
 
 }
