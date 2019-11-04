@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-story-listing',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoryListingPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  goToStoryPointing() {
+    this.router.navigate(['story-point']);
+  }
 }
