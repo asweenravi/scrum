@@ -1,4 +1,4 @@
-##Ng Scrum Assist
+## Ng Scrum Assist
 
 ## Goal
 
@@ -11,7 +11,7 @@ The Goal is to achieve effective refinement with story poiting.
 - User can select the story and it will redirect user to story point page
 - Team member can select the story point and  we will have summary of user and story Map
 
-##Techonology
+## Techonology
 
 - Angular8
 - Ionic 5
