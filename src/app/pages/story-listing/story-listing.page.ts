@@ -8,16 +8,26 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['./story-listing.page.scss'],
 })
 export class StoryListingPage implements OnInit {
-
+  storyList = [
+    {
+      'number': 'ORANGE-21873',
+      'title': 'MFA feature flag lift'
+    },
+    {
+      'number': 'ORANGE-21875',
+      'title': 'Reset MFA'
+    }
+  ]
   constructor(
     private router: Router,
     public actionSheetController: ActionSheetController
-    ) { }
+  ) { }
 
   ngOnInit() {
   }
-  
-  async presentActionSheet() {
+
+  async presentActionSheet(story) {
+    localStorage.setItem('story',story.number)
     const actionSheet = await this.actionSheetController.create({
       header: 'Actions',
       buttons: [{
