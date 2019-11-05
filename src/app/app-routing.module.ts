@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'story-detail/:id', loadChildren: () => import('./pages/story-detail/story-detail.module').then(m => m.StoryDetailPageModule) },
   { path: 'login', loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)},
   { path: 'story-listing', loadChildren: () => import('./pages/story-listing/story-listing.module').then( m => m.StoryListingPageModule)},
+  { path: 'view-story-point', loadChildren: './pages/view-story-point/view-story-point.module#ViewStoryPointPageModule' },
 ];
 
 @NgModule({

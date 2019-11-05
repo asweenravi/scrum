@@ -8,14 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-card (click)="goToStoryPointing()">
+  <ion-card (click)="presentActionSheet(story)" *ngFor="let story of storyList">
     <ion-card-header>
       <ion-card-title>
-        ORANGE-21873
+        {{story.number}}
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      MFA feature flag lift
+      {{story.title}}
     </ion-card-content>
   </ion-card>
 </ion-content>
